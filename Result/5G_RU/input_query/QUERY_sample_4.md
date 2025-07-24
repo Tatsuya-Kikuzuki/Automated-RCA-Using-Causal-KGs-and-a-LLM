@@ -1,0 +1,1 @@
+CU-IP is not assigned in RU.

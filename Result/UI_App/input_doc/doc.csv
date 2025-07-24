@@ -1,0 +1,45 @@
+"Data for analysis could not be loaded.
+
+It was found that this was due to a corrupted format in the header part of the data.
+The data could be read normally by overwriting the header part with that of normal data."
+"The application was forcefully terminated immediately after start-up.
+
+The version of the UI app had been updated to an incompatible version, which prevented the app from starting up properly. The reason for the incompatible versions was that the UI app had been downloaded via the internet.
+After downloading it from within the company and reinstalling it, the version was set to the correct one and the system was able to start up."
+"Analysis process was interrupted midway through.
+
+This was due to an unstable network environment.
+Switching Wi-Fi environment to a wired NW enabled analysis."
+"The screen got stuck in the middle of a screen transition.
+
+It was found that the unstable network environment was the cause of the screen getting stuck.
+After improving the network environment and restarting the application, this phenomenon did not recur."
+"When trying to load data for analysis, a loading error occurs.
+
+The version of the UI app had been updated to an incompatible version, which caused that data could not be loaded. The UI app version was updated on its own because automatic updates were switched on in the basic settings.
+After switching off the setting of automatic updates, the loading error did not recur."
+"A loading error occurs when loading data for analysis.
+
+The reason was that numerical and textual data had been mixed.
+When a retry was made with only numerical data, the data could be loaded successfully."
+"Application cannot be called from the browser.
+
+Browser massage shows that it cannot establish a connection to the application server.
+The reason why the connection fails was that the JAVA did not start up successfully on the server."
+"JAVA failed to start up.
+
+There were wrong configuration files in the library directory due to the wrong version. It was because JAVA version is too old to boot on this environment.
+After updating the JAVA, the incidents would not happen again. 
+"
+"JAVA could not start up successfully.
+
+That is because the password of the application to boot the server including JAVA library has expired.
+It can be modified by changing the password by yourself."
+"Application cannot be called from the browser.
+
+Error code shows  CA certificate on local side is missing or wrong.
+Contents of the PKI directory of the dervice is checked, then some files is missing. After re-downloading and importing the complete directory, the problem become solved."
+"Data tree is not shown on the Internet Explorer.
+
+It is because the pages are encrypted.
+To show the data tree, open the Internet Explorer Advanced settings and deselect Do not save encrypted pages to disk."

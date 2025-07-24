@@ -1,0 +1,65 @@
+"Throughput was not enough on UEs during test experiments. 
+It has happened because a lower MCS was assigned by gNodeB as log showed. We reset UEs, but it recurred.
+This was due to the channel quality being worse than expecte.
+
+We moved UEs locatoion far from the initial field, then the issue finally resolved. The combination of the test field environment's terrain and UE's antenna configurations was found to be susceptible to frequency selectivity and have caused this event."
+"The UE connection was difficult to establish. In addition, the MCS assigned was low after connection.
+
+On investigation, it was found that the RX sensitivity was normal, but the gain settings on the DU procured from the new vendor were incorrect. This caused poor channel quality at all times, and finally resulted in the incident described at the beginning.
+
+When the gain settings were made correct, the problem was resolved."
+"The number of connectable UEs was lower than usual.
+
+Although the received power was sufficient, a lower MCS was assigned, which resulted in an unjustified occupation of the bandwidth.
+This was due to an incorrect MCS setting in the DU of Vendor B, which had assigned a lower MCS. We modified the DU's code of MCS configuration, then the incident did not recur."
+"CU-IP was not getting assigned in RU with v356 software.
+We observed PTP too was getting unlocked with v356 build.
+
+5gdulls log shows ""Software-Failure"", which incicates the fact that RU could not catch the DHCP IP address correctly by the stacking of the software. In the v356 software, functionality of FQDN is developed partially and it conflicts with the DHCP function. It affects the PTP unlocked issue as well.
+
+Issue has been fixed with software v359, Now CU-IP getting configured on RU and PTP unlocked issue cleared.
+"
+"No Data was transmitted from DU.
+It was observed that PTP and SyncE getting unlocked and those caused the incident.
+
+According to 5gdulls logs, L1 was down. Need to check connection from DU to RU.
+
+After replacing the v1 SFP with v2 SFP, PTP and SyncE got locked state successfully.
+Here problem was not SFP itself, but it should be compatibility issue."
+"The DU failed to transmit data because PTP got unlocked.
+
+We tried rebooting RU. Once RU is up, PTP gets locked and in 4 to 5 minutes goes unlocked state again, then no data is obserbed from DU.
+
+Checked PTP accuracy and found that the PTP threshold for v201 software (Å}80 nsec) was too low, resulting in an unlocked state.
+The issue was no longer observed after threshold of PTP accuracy was changed from 80ns to 1420ns in v206.
+"
+"During the connection test, the DU stopped sending packets.
+It was found that the PTP got unlocked.
+
+When the number of UE connections or throughput increased, the process to handle those caused a memory overload and the PTP control program was in an error state. This caused issues.
+
+The problem was addressed by implementing exlusive control of PTP control and data processing."
+"Interference from neighbouring cells was greater than expected.
+
+We observed RF power fluctuating with the RU.
+We ran Downlink test case 64QAM where we are able to see good constellation, But after some time when we retest again, we started observing poor constellation and RF power fluctuating.
+
+We asked Vendor C and their investigation found that it was not calibrated yet with new power supply used in the field.
+They recalibrated it and Interference power mitigated as usual."
+"CRC (Cyclic Redundancy Check) has failed during 256 QAM test.
+It was caused by the RF power fluctuation and Constellation fluctuation inside RU.
+
+RF power seems fluctuating and is unstable with all bandwidths and modulations.
+
+RF power fluctuation Issue is not seen after replacing this RU. Observed issue with the old RU.
+Environment and carrier configuration including cable connections and attenuators is exactly the same for both old RU and new RU. Observed that this is a HW issue and the amplifier is damaged on this unit."
+"UE attach failed after configuring the radio.
+
+After Post successful PDU (Protocol Data Unit) establishment, Downlink data stops within seconds and UE doesn't see the cell any more when the carrier is brought up via M-Plane.
+
+Log analysis: User plane packet is not coming after UE attached.RU receives U-plane packet but it is unstable.
+When using command rrh-power, when the UE can not see the cell, the RF power is fluctuating.
+
+We confirmed that RF power fluctuation has occurred inside the RU because DPD (digital predistortion) is turned on.
+
+For now, the DPD setting was switched off and the problem was solved as UE does not fail to see the cell. The performance of the DPD needs to be re-examined."

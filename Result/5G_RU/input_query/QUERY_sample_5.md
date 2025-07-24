@@ -1,0 +1,1 @@
+No Data is transmitted from DU.

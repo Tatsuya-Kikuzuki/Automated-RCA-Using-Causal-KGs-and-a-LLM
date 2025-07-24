@@ -1,0 +1,1 @@
+The application was forcefully terminated.

@@ -1,0 +1,1 @@
+The screen transition got stuck.

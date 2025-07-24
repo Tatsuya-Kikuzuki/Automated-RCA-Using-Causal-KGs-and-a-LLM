@@ -1,0 +1,1 @@
+Interference from neighbouring cells is too large.

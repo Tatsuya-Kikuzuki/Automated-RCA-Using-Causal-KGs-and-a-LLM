@@ -1,0 +1,1 @@
+Application cannot be called from the browser.
