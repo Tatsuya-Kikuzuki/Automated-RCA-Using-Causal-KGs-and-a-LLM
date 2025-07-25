@@ -1,0 +1,25 @@
+"MOP 18: Antenna ports are not radiating
+
+1.Description
+On FCC-DB Antenna Ports B and D are not transmitting and an internal PS Alarm seen.
+: SW-Version, HW-Version & HW-Serial Number: V2001, 00018.
+Lab setup
+E2E system
+
+2. Observation
+a) After reboot ,PS alarm was not observed. But when the carrier configuration is pushed from M-Plane to the RU, observed port B is not 
+transmitting and Internal PS alarm was seen.
+b) In previous issues related to PS alarm, After RU reboot Internal PS alarm used to be present, but this particular RU not showing any alarm after 
+RU reboot.
+
+3. Procedure/Step Involved
+a) When sector is configured for 4x4 configuration(gain:46dBm/antenna), ports B and D were not transmitting. When sector is configured for 2x2 
+configuration (gain:46dBm/antenna), Port B was not transmitting.
+b) Observed low throughput, when RU diagnosed for above two configurations, ports B and D are faulty.
+c) Logs provided for before and after carrier configuration push .
+d) Checked the SW version previous and present version V2001.
+e) According to the cmd_alllog, there are PS ALM 500~1300 seconds after boot. This issue is recoverable after a reboot, so it is not a HW issue. if 
+Hardware issue, This ALM will happen immediately after boot.
+
+4. Resolution
+Issue is related to the ADI component. Plan B DB solves this problem."

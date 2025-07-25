@@ -55,6 +55,7 @@ We put two demonstration projects.
 | `Code`        | `/OSS.csv`        | Doc  | OSS   | OSS list used by our repo |
 | `Result`      | `/UI_App`         | Demo  || Usecase of installing and using UI application |
 | `Result`      | `/5G_RU`          | Demo  || Usecase of operation test of 5G RU including interoperability test between 5G-DU and it |
+| `Result`      | `/5G_RU_real(extracted)`          | Result || Extract of real internal documents, queries, analisis results, and evaluation score sheets in the usecase of 5G_RU |
 | `README.md` || README  || You are here! |
 | `LICENSE` || LICENSE  || LICENSE document |
 
