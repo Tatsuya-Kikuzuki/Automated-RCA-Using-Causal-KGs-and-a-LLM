@@ -558,10 +558,10 @@ if __name__ == '__main__':
         # output_token = token_extract(db_dir_path, SEARCH_OUTPUT, 13)
         # input_token = 0
         # output_token = 0
-        with open(DB_DIR_PATH + '/db_kg/token_info.bin', 'rb') as p:
-            token_info = pickle.load(p)
-        input_token += token_info["input_token"]
-        output_token += token_info["output_token"]
+        # with open(DB_DIR_PATH + '/db_kg/token_info.bin', 'rb') as p:
+        #     token_info = pickle.load(p)
+        # input_token += token_info["input_token"]
+        # output_token += token_info["output_token"]
 
         len_res = len(response_list_kg[1])
         kg_res = write_nl("\n\n" + KG_DEL, "")

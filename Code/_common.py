@@ -212,14 +212,17 @@ class Common_func:
             detected language (0: others, 1: Japanese, 2: English)
         """
         try:
-            # detect the language
-            language = detect(text)
-            if language == "en":
-                return self.Set.LANG_ENGLISH
-            elif language == "ja":
-                return self.Set.LANG_JAPANESE
-            else:
+            if text == "":
                 return self.Set.LANG_OTHER
+            else:
+                # detect the language
+                language = detect(text)
+                if language == "en":
+                    return self.Set.LANG_ENGLISH
+                elif language == "ja":
+                    return self.Set.LANG_JAPANESE
+                else:
+                    return self.Set.LANG_OTHER
 
         except Exception as e:
             print(str(e))

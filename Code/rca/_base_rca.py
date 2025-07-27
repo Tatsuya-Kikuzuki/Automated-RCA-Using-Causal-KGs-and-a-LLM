@@ -73,26 +73,26 @@ class Base:
         try:
             self.udb.load_db()
         except Exception as e:
-            self.log.dump("[ERROR]", "[load_db](1)", e)
+            # self.log.dump("[ERROR]", "[load_db](1)", e)
             return St.ERR_RCA_MAIN_UNEXPECTED
 
         status, metadata = self.udb.load_metadata()
         if not status == St.SUCCESS:
             e = 'not found metadata.json'
-            self.log.dump("[ERROR]", "[load_db](2)", e)
+            # self.log.dump("[ERROR]", "[load_db](2)", e)
             return status
 
         self.field = metadata['field']
         self.cat_list = metadata['cat_list']
 
         if self.field == '':
-            self.log.dump("[ERROR]", "[load_db](2)", 'error of field')
+            # self.log.dump("[ERROR]", "[load_db](2)", 'error of field')
             status = St.ERR_RCA_MAIN_ARG
 
         try:
             self.language_field = Cf.detect_language(self.field)
         except Exception as e:
-            self.log.dump("[ERROR]", "[load_db](3)", e)
+            # self.log.dump("[ERROR]", "[load_db](3)", e)
             return St.ERR_RCA_MAIN_UNEXPECTED
 
         return St.SUCCESS
@@ -115,6 +115,6 @@ class Base:
         try:
             self.language_query = Cf.detect_language(query)
         except Exception as e:
-            self.log.dump("[ERROR]", "[check_query]", e)
+            # self.log.dump("[ERROR]", "[check_query]", e)
             return St.ERR_RCA
         return St.SUCCESS
