@@ -1,9 +1,10 @@
-# Automated Root Cause Analysis Using Causal Knowledge Graphs and a Large Language Model
-Root cause analysis (RCA) is a critical task in incident management that identifies the root cause of incidents. However, although it is essential for early restoration, it often demands extensive and time-consuming efforts.
-Existing RCA approaches, including rule-based and troubleshooting-based methods, cannot analyze causal relationships across multiple incident cases, which is essential for comprehensive RCA given the complexity and diversity of root causes.
-To address this challenge, we propose a novel framework for automated RCA utilizing causal knowledge graphs (KGs) and a large language model (LLM).
-Because of our step-by-step instructions for the LLM, the proposed framework automatically constructs causal KGs by extracting events from input documents in order of importance for RCA in a zero-shot setting. Our framework also utilizes the LLM to preprocess input documents, evaluate the constructed causal KGs, unify KGs with the same events, and perform RCA by traversing the KG edges.
-Comparative evaluations with the conventional retrieval-augmented generation approach demonstrate that our framework provides more comprehensive answers through multihop analysis and achieves a significant improvement in 5-point scale evaluation scores by human experts for comprehensiveness (from 2.79 to 3.18), hallucination mitigation (from 3.09 to 3.31), and explainability (from 2.69 to 3.12).
+# Root Cause Analysis for Wireless Networks Using Causal Knowledge Graphs and an LLM
+Root cause analysis (RCA) is a critical task in incident management of wireless networks. Although it is essential for restoration and maintenance of performance, it often demands extensive and time-consuming efforts.
+Existing RCA approaches, including rule-based and troubleshooting-based methods, cannot analyze causal relationships across multiple incident tickets.
+However, this capability is essential for comprehensive and accurate RCA considering that incidents or performance deterioration in wireless networks are caused by a cascade of various factors, such as software/hardware/environmental issues, and interactions between multiple base stations and UEs.
+To address this challenge, we propose a novel framework for automated RCA based on incident tickets, that extracts causal knowledge graphs (KGs) from documents using a large language model (LLM) and uses them for inference.
+Because of our step-by-step method for constructing causal KGs optimized for RCA, it automatically constructs KGs including events causality across multiple documents.
+Comparative evaluations with the conventional retrieval-augmented generation approach demonstrate that our framework achieves a significant improvement in 5-point scale evaluation scores by human experts for comprehensiveness (from 2.79 to 3.18), hallucination mitigation (from 3.09 to 3.31), and explainability (from 2.69 to 3.12).
 
 To learn more about our framework of causal KGs and how it can be used to enhance root cause analysis, please visit the [Fujitsu Tech Blog](https://blog-en.fltech.dev/entry/2024/10/11/kgrca-en/).
 
@@ -49,7 +50,7 @@ We put two demonstration projects.
 | `Code`        | `/utilKG.py`      | Code | Module | Module to execute KG-related function |
 | `Code`        | `/rca.py`         | Code | Module | Module to execute inference function |
 | `Code`        | `/db`             | Doc  | DB     | Database of both RAG and KG |
-| `Code`        | `/input_doc`      | Doc  | Document   | Input document to be uploaded to DB |
+| `Code`        | `/input_doc`      | Doc  | Document   | Input documents (incident tickets) to be uploaded to DB |
 | `Code`        | `/input_query`    | Doc  | Query   | Input query|
 | `Code`        | `/output_query`   | Doc  | Response   | Response from LLM based on input query and databases |
 | `Code`        | `/OSS.csv`        | Doc  | OSS   | OSS list used by our repo |
@@ -65,7 +66,7 @@ We put two demonstration projects.
 - python packages listed in `Code/OSS.csv`
 
 # Publication
-- Tatsuya Kikuzuki, Akihiro Wada, Yoshihiro Okawa, and Masatoshi Ogawa, "Automated Root Cause Analysis Using Causal Knowledge Graphs and a Large Language Model," submitted for publication. 
+- Tatsuya Kikuzuki, Akihiro Wada, Yoshihiro Okawa, and Masatoshi Ogawa, "Root Cause Analysis for Wireless Networks Using Causal Knowledge Graphs and an LLM," submitted for publication. 
 
 # Contacts
 - Tatsuya Kikuzuki: kikuzuki{at}fujitsu.com
